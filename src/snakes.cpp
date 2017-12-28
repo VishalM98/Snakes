@@ -16,12 +16,10 @@ std::ostringstream sha_temp; // a temporary variable to convert int to string
 
 /* A class for implementing SHA-256
    having some functions which are declared later.
-
    The function which calculates the SHA of a 
    string => sha256(std::string)[declared later]
    uses these functions as utility functions
-
-   Apart from these some definitions are also there.   	
+   Apart from these some definitions are also there.    
 */
 class SHA256
 {
@@ -439,11 +437,11 @@ int main()
     int i = 0;
     while(true and !sha_score.empty())
     {
-    	sha_temp.str("");
-    	sha_temp << i;
-    	if(sha_score == sha256(sha_temp.str()))
-    		break;  // value found
-    	i++;
+      sha_temp.str("");
+      sha_temp << i;
+      if(sha_score == sha256(sha_temp.str()))
+        break;  // value found
+      i++;
     }
     scoreold = i; //assign the scoreold
     arrx=(int *)malloc(len*sizeof(int));
